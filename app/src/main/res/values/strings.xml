@@ -1,10 +1,12 @@
 <resources>
     <string name="app_name">Jogo da Memória</string>
     <string name="reset">Reiniciar</string>
-    <string name="bnt1">1</string>
-    <string name="bnt2">2</string>
-    <string name="bnt3">3</string>
-    <string name="bnt4">4</string>
-    <string name="bnt5">5</string>
-    <string name="bnt6">6</string>
+    <string name="btn1">1</string>
+    <string name="btn2">2</string>
+    <string name="btn3">3</string>
+    <string name="btn4">4</string>
+    <string name="btn5">5</string>
+    <string name="btn6">6</string>
+
+    <string name="progress_label">Progresso: </string>
 </resources>

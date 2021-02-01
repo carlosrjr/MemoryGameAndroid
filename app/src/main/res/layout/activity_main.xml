@@ -26,6 +26,7 @@
             android:layout_width="132dp"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:onClick="resetGame"
             android:text="@string/reset" />
 
     </RelativeLayout>
@@ -54,7 +55,8 @@
             android:layout_column="0"
             android:layout_gravity="center"
             android:layout_margin="16dp"
-            android:text="@string/bnt1"
+            android:text="@string/btn1"
+            android:onClick="selectNumber"
             app:backgroundTint="@color/blue" />
 
         <Button
@@ -65,7 +67,8 @@
             android:layout_column="1"
             android:layout_gravity="center"
             android:layout_margin="16dp"
-            android:text="@string/bnt2"
+            android:text="@string/btn2"
+            android:onClick="selectNumber"
             app:backgroundTint="@color/red" />
 
         <Button
@@ -76,7 +79,8 @@
             android:layout_column="0"
             android:layout_gravity="center"
             android:layout_margin="16dp"
-            android:text="@string/bnt3"
+            android:text="@string/btn3"
+            android:onClick="selectNumber"
             app:backgroundTint="@color/green" />
 
         <Button
@@ -87,7 +91,8 @@
             android:layout_column="1"
             android:layout_gravity="center"
             android:layout_margin="16dp"
-            android:text="@string/bnt4"
+            android:text="@string/btn4"
+            android:onClick="selectNumber"
             app:backgroundTint="@color/yellow" />
 
         <Button
@@ -98,7 +103,8 @@
             android:layout_column="0"
             android:layout_gravity="center"
             android:layout_margin="16dp"
-            android:text="@string/bnt5"
+            android:text="@string/btn5"
+            android:onClick="selectNumber"
             app:backgroundTint="@color/grey" />
 
         <Button
@@ -109,7 +115,8 @@
             android:layout_column="1"
             android:layout_gravity="center"
             android:layout_margin="16dp"
-            android:text="@string/bnt6"
+            android:text="@string/btn6"
+            android:onClick="selectNumber"
             app:backgroundTint="@color/yellow_900" />
     </GridLayout>
 
