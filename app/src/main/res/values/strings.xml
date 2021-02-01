@@ -9,4 +9,6 @@
     <string name="btn6">6</string>
 
     <string name="progress_label">Progresso: </string>
+    <string name="congratulations">Parabéns!</string>
+    <string name="subtitle_congratulations">Você tem uma boa memória!</string>
 </resources>

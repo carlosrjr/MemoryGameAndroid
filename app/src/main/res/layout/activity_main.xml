@@ -7,12 +7,12 @@
     android:weightSum="10"
     android:orientation="vertical"
     android:id="@+id/bgApp"
-    android:background="@color/teal_200"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <RelativeLayout
-        android:layout_width="417dp"
-        android:layout_height="58dp"
+        android:layout_width="421dp"
+        android:layout_height="56dp"
         android:layout_weight="2"
         app:layout_constraintBottom_toBottomOf="@+id/bgApp"
         app:layout_constraintHorizontal_bias="0.666"
@@ -26,10 +26,10 @@
             android:layout_width="132dp"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:onClick="resetGame"
             android:backgroundTint="@color/grey"
-            android:textColor="@color/black"
-            android:text="@string/reset" />
+            android:onClick="resetGame"
+            android:text="@string/reset"
+            android:textColor="@color/black" />
 
     </RelativeLayout>
 
@@ -119,10 +119,41 @@
             android:text="@string/btn6"
             android:onClick="selectNumber"
             app:backgroundTint="@color/yellow_900" />
+
+
+        <TextView
+            android:id="@+id/congratulations_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:visibility="gone"
+            android:gravity="center"
+            android:text="@string/congratulations"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/congratulations_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:visibility="gone"
+            android:gravity="center"
+            android:text="@string/subtitle_congratulations"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+
+            android:textSize="30sp" />
     </GridLayout>
 
 
     <GridLayout
+        android:id="@+id/grid_progress"
         android:layout_width="339dp"
         android:layout_height="22dp"
         android:layout_weight="2"
@@ -138,6 +169,7 @@
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:text="@string/progress_label"
+            android:textColor="@color/black"
             android:gravity="center" />
 
         <ProgressBar
@@ -150,10 +182,14 @@
             android:minWidth="200dp"
             android:minHeight="10dp"
             android:progress="0"
-            android:progressBackgroundTint="@color/grey"
-            android:progressTint="@color/red"
+            android:progressBackgroundTint="@color/dark_grey"
+            android:progressTint="@color/teal_200"
             android:scaleY="5" />
-
     </GridLayout>
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
