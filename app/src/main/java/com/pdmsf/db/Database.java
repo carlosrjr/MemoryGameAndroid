@@ -16,7 +16,7 @@ public class Database {
     private static final int DATABASE_ACCESS = 0;
     private static final String SQL_STRUCT = "CREATE TABLE IF NOT EXISTS player(id_ INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT NOT NULL, score INTEGER NOT NULL DEFAULT 0, errors INTEGER NOT NULL DEFAULT 0); ";
     private static final String SQL_INSERT = "INSERT INTO player (nome, score, errors) VALUES ('%s', '%d', '%d');";
-    private static final String SQL_SELECT_ALL = "SELECT * FROM player ORDER BY score DESC, errors ASC LIMIT 15;";
+    private static final String SQL_SELECT_ALL = "SELECT * FROM player ORDER BY score DESC, errors ASC LIMIT 10;";
     private static final String SQL_CLEAR = "DROP TABLE IF EXISTS player;";
     private SQLiteDatabase database;
     private Cursor cursor;
