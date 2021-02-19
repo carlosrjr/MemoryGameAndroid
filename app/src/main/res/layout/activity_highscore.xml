@@ -11,15 +11,15 @@
         android:id="@+id/highscore"
 
         android:layout_width="match_parent"
-        android:layout_height="600dp"
+        android:layout_height="500dp"
         android:layout_weight="2"
-        app:layout_constraintBottom_toBottomOf="@+id/bgApp"
+        app:layout_constraintBottom_toBottomOf="@+id/highscoreView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.3"
-        app:layout_constraintLeft_toLeftOf="@+id/bgApp"
-        app:layout_constraintRight_toRightOf="@+id/bgApp"
+        app:layout_constraintLeft_toLeftOf="@+id/highscoreView"
+        app:layout_constraintRight_toRightOf="@+id/highscoreView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/bgApp"
+        app:layout_constraintTop_toTopOf="@+id/highscoreView"
         app:layout_constraintVertical_bias="0.145">
 
         <ListView
@@ -50,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:gravity="center"
-            android:layout_marginRight="80dp"
+            android:layout_marginEnd="80dp"
             android:backgroundTint="@color/grey"
             android:text="@string/btn_back"
             android:onClick="back"
@@ -65,7 +65,7 @@
             android:gravity="center"
             android:onClick="clearHighscore"
             android:textColor="@color/black" />
-
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

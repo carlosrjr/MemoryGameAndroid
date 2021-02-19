@@ -40,6 +40,7 @@ public class MyTimer extends CountDownTimer {
     public void onFinish() {
         now = 1;
         progressBar.setProgress(0);
+        scoreView.setText("0");
         mainActivity.setWinner(true);
     }
 }
