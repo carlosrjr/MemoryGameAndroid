@@ -2,16 +2,16 @@ package com.pdmsf.model;
 
 public class Player {
     private String nome;
-    private String score;
+    private int score;
     private int errors;
 
     public Player() {
         this.nome = "";
-        this.score = "0";
+        this.score = 0;
         this.errors = 0;
     }
 
-    public Player(String nome, String score, int errors) {
+    public Player(String nome, int score, int errors) {
         this.nome = nome;
         this.score = score;
         this.errors = errors;
@@ -25,11 +25,11 @@ public class Player {
         this.nome = nome;
     }
 
-    public String getScore() {
+    public int getScore() {
         return score;
     }
 
-    public void setScore(String score) {
+    public void setScore(int score) {
         this.score = score;
     }
 

@@ -14,9 +14,9 @@ public class Database {
     private static final String DATABASE_NAME = "memory_game";
 
     private static final int DATABASE_ACCESS = 0;
-    private static final String SQL_STRUCT = "CREATE TABLE IF NOT EXISTS player(id_ INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT NOT NULL, score TEXT NOT NULL, errors INTEGER NOT NULL DEFAULT 0); ";
-    private static final String SQL_INSERT = "INSERT INTO player (nome, score, errors) VALUES ('%s', '%s', '%d');";
-    private static final String SQL_SELECT_ALL = "SELECT * FROM player ORDER BY score DESC LIMIT 15;";
+    private static final String SQL_STRUCT = "CREATE TABLE IF NOT EXISTS player(id_ INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT NOT NULL, score INTEGER NOT NULL DEFAULT 0, errors INTEGER NOT NULL DEFAULT 0); ";
+    private static final String SQL_INSERT = "INSERT INTO player (nome, score, errors) VALUES ('%s', '%d', '%d');";
+    private static final String SQL_SELECT_ALL = "SELECT * FROM player ORDER BY score DESC, errors ASC LIMIT 15;";
     private static final String SQL_CLEAR = "DROP TABLE IF EXISTS player;";
     private SQLiteDatabase database;
     private Cursor cursor;
@@ -38,7 +38,6 @@ public class Database {
     public void insert(Player player) {
         String query = String.format(SQL_INSERT, player.getNome(), player.getScore(), player.getErrors());
         database.execSQL(query);
-
     }
 
     public List<Player> all() {
@@ -54,7 +53,7 @@ public class Database {
             indexErrors = cursor.getColumnIndex("errors");
 
             do {
-                player = new Player(cursor.getString(indexNome), cursor.getString(indexScore), cursor.getInt(indexErrors));
+                player = new Player(cursor.getString(indexNome), cursor.getInt(indexScore), cursor.getInt(indexErrors));
                 players.add(player);
             } while (cursor.moveToNext());
         }

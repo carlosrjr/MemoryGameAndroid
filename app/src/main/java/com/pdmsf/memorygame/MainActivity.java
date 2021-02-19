@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         gridButtons = (GridLayout) findViewById(R.id.grid_buttons);
         btn_save_score = (Button) findViewById(R.id.btn_save_score);
         total_errors = (TextView) findViewById(R.id.total_errors);
-        myTimer = new MyTimer(TIME_DEFAULT*1000, 1000, progressBar, this);
+        myTimer = new MyTimer(TIME_DEFAULT*1000, 1000, progressBar, this, scoreView);
         progressBar.setMax(TIME_DEFAULT);
 
         //setContentView(R.layout.activity_main);
@@ -120,11 +120,12 @@ public class MainActivity extends AppCompatActivity {
             int color = button.getBackgroundTintList().getDefaultColor();
 
             bg.setBackgroundColor(color);
-            scoreView.setText(String.format("%s", Long.valueOf(String.valueOf(scoreView.getText())) + myTimer.getScore()));
+            //scoreView.setText(String.format("%s", Long.valueOf(String.valueOf(scoreView.getText())) + myTimer.getScore()));
             matchButton.add(button);
             button.setVisibility(View.INVISIBLE);
             index += 1;
             if(index == 6) {
+                myTimer.cancel();
                 gridProgress.setVisibility(View.INVISIBLE);
                 setWinner(true);
             }
@@ -141,10 +142,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void saveHighscore(View view) {
-        String name = playerName.getText().toString().trim().length() == 0 ? "Não informado" : playerName.getText().toString().trim().substring(0,15);
+        int sizeName = (playerName.getText().toString().trim().length() < 15) ? playerName.getText().toString().trim().length() : 15;
+        String name = playerName.getText().toString().trim().length() == 0 ? "Não informado" : playerName.getText().toString().trim().substring(0,sizeName);
         Player p = new Player();
         p.setNome(name);
-        p.setScore(scoreView.getText().toString());
+        p.setScore(Integer.parseInt(scoreView.getText().toString()));
         p.setErrors(errors);
 
         playerName.setText("");
@@ -168,8 +170,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calcError() {
-        long points = Long.valueOf(String.valueOf(scoreView.getText()));
-        scoreView.setText(String.format("%s", (int)(points * (0.5))));
+        //long points = Long.valueOf(String.valueOf(scoreView.getText()));
+        //scoreView.setText(String.format("%s", (int)(points * (0.5))));
         errors++;
     }
 }
