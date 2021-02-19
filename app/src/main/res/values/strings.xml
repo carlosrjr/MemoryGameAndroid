@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Jogo da Memória</string>
+    <string name="app_name">Jogo da Memorização</string>
     <string name="reset">Reiniciar</string>
     <string name="btn1">1</string>
     <string name="btn2">2</string>
@@ -8,7 +8,14 @@
     <string name="btn5">5</string>
     <string name="btn6">6</string>
 
-    <string name="progress_label">Progresso: </string>
-    <string name="congratulations">Parabéns!</string>
-    <string name="subtitle_congratulations">Você tem uma boa memória!</string>
+    <string name="progress_label">Tempo: </string>
+    <string name="congratulations">Fim de jogo!</string>
+    <string name="subtitle_congratulations"></string>
+    <string name="player_score">Digite seu nome</string>
+    <string name="btn_save_score">Salvar pontuação</string>
+    <string name="btn_score">Pontuações</string>
+    <string name="errors">Errors:</string>
+
+    <string name="btn_clear">Limpar</string>
+    <string name="btn_back">Voltar</string>
 </resources>

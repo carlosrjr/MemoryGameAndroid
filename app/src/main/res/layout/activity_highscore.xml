@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/highscoreView"
+    tools:context="com.pdmsf.widgets.HighscoreActivity">
+
+    <RelativeLayout
+        android:id="@+id/highscore"
+
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_weight="2"
+        app:layout_constraintBottom_toBottomOf="@+id/bgApp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintLeft_toLeftOf="@+id/bgApp"
+        app:layout_constraintRight_toRightOf="@+id/bgApp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bgApp"
+        app:layout_constraintVertical_bias="0.145">
+
+        <ListView
+            android:id="@+id/lista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ListView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        app:layout_constraintBottom_toBottomOf="@+id/highscoreView"
+        app:layout_constraintVertical_bias="0.05"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginBottom="40dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_marginRight="80dp"
+            android:backgroundTint="@color/grey"
+            android:text="@string/btn_back"
+            android:onClick="back"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/grey"
+            android:text="@string/btn_clear"
+            android:gravity="center"
+            android:onClick="clearHighscore"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
